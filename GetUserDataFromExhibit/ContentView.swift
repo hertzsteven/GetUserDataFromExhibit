@@ -41,39 +41,43 @@ struct ContentView: View {
                 TextField("School Name", text: $schoolName)
                     .disableAutocorrection(true)
             }
-            
-            Button(action: {
-                let data = "\(firstName),\(lastName),\(email),\(phoneNumber),\(schoolName)\n".data(using: .utf8)
-
-                if let fileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("data.csv") {
-                    do {
-                         let fileHandle: FileHandle
-                         if FileManager.default.fileExists(atPath: fileURL.path) {
-                             fileHandle = try FileHandle(forWritingTo: fileURL)
-                         } else {
-                             FileManager.default.createFile(atPath: fileURL.path, contents: nil, attributes: nil)
-                             fileHandle = try FileHandle(forWritingTo: fileURL)
-                         }
-                         defer {
-                             fileHandle.closeFile()
-                         }
-                         fileHandle.seekToEndOfFile()
-                         fileHandle.write(data!)
-                        
-                            // Reset the text field values
+            HStack {
+                Spacer()
+                Button(action: {
+                    let data = "\(firstName),\(lastName),\(email),\(phoneNumber),\(schoolName)\n".data(using: .utf8)
+                    
+                    if let fileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("data.csv") {
+                        do {
+                            let fileHandle: FileHandle
+                            if FileManager.default.fileExists(atPath: fileURL.path) {
+                                fileHandle = try FileHandle(forWritingTo: fileURL)
+                            } else {
+                                FileManager.default.createFile(atPath: fileURL.path, contents: nil, attributes: nil)
+                                fileHandle = try FileHandle(forWritingTo: fileURL)
+                            }
+                            defer {
+                                fileHandle.closeFile()
+                            }
+                            fileHandle.seekToEndOfFile()
+                            fileHandle.write(data!)
+                            
+                                // Reset the text field values
                             firstName = ""
                             lastName = ""
                             email = ""
                             phoneNumber = ""
                             schoolName = ""
-                        
-                        usernameFieldIsFocused = true
-
-                     } catch {
-                         print("Error writing to file: \(error)")
-                     }                }
-            }) {
-                Text("Save")
+                            
+                            usernameFieldIsFocused = true
+                            
+                        } catch {
+                            print("Error writing to file: \(error)")
+                        }                }
+                }) {
+                    Text("Save")
+                        .font(.title3)
+                }
+                 Spacer()
             }
         }.font(.system(size: 16))
     }
