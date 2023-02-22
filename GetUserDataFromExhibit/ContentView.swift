@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import iPhoneNumberField
 
 struct ContentView: View {
     @State private var firstName = ""
@@ -21,17 +22,24 @@ struct ContentView: View {
             Section(header: Text("Personal Information")) {
                 TextField("First Name", text: $firstName)
                     .focused($usernameFieldIsFocused)
+                    .disableAutocorrection(true)
                 TextField("Last Name", text: $lastName)
+                    .disableAutocorrection(true)
                 TextField("Email", text: $email)
+                    .disableAutocorrection(true)
                     .keyboardType(.emailAddress)
                                .textContentType(.emailAddress)
-                TextField("Phone Number", text: $phoneNumber)
-                    .keyboardType(.decimalPad)
+                
+                iPhoneNumberField("Phone", text:  $phoneNumber)
+                    .disableAutocorrection(true)
+//                TextField("Phone Number", text: $phoneNumber)
+//                    .keyboardType(.decimalPad)
                    
             }
 
             Section(header: Text("School Information")) {
                 TextField("School Name", text: $schoolName)
+                    .disableAutocorrection(true)
             }
             
             Button(action: {

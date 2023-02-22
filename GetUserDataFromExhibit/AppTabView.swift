@@ -12,10 +12,10 @@ struct AppTabView: View {
         TabView {
             NavigationView {
                 ContentView()
-                    .navigationBarTitle("Add Contact")
+                    .navigationBarTitle("Need More Informationt")
             }
             .tabItem {
-                Text("Add Contact")
+                Text("Need More Infomation")
             }
 
             NavigationView {
