@@ -11,6 +11,7 @@
 		468DA4E729A65F4D00E44A27 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468DA4E629A65F4D00E44A27 /* ContentView.swift */; };
 		468DA4E929A65F4E00E44A27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 468DA4E829A65F4E00E44A27 /* Assets.xcassets */; };
 		468DA4EC29A65F4E00E44A27 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 468DA4EB29A65F4E00E44A27 /* Preview Assets.xcassets */; };
+		468DA4F329A662ED00E44A27 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468DA4F229A662ED00E44A27 /* AppTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		468DA4E629A65F4D00E44A27 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		468DA4E829A65F4E00E44A27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		468DA4EB29A65F4E00E44A27 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		468DA4F229A662ED00E44A27 /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				468DA4E429A65F4D00E44A27 /* GetUserDataFromExhibitApp.swift */,
 				468DA4E629A65F4D00E44A27 /* ContentView.swift */,
+				468DA4F229A662ED00E44A27 /* AppTabView.swift */,
 				468DA4E829A65F4E00E44A27 /* Assets.xcassets */,
 				468DA4EA29A65F4E00E44A27 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				468DA4F329A662ED00E44A27 /* AppTabView.swift in Sources */,
 				468DA4E729A65F4D00E44A27 /* ContentView.swift in Sources */,
 				468DA4E529A65F4D00E44A27 /* GetUserDataFromExhibitApp.swift in Sources */,
 			);
@@ -275,6 +279,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,6 +309,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
